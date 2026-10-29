@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil Acessível</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <h1>Meu Perfil Acessível</h1>
+        <p>Conheça um pouco sobre este estudante.</p>
+    </header>
+
+    <main class="container">
+        <!-- Cartão de Perfil Principal -->
+        <section class="profile-card" aria-labelledby="info-estudante">
+            <div class="avatar-container">
+                <!-- Substitua pelo link da sua imagem ou use este placeholder livre -->
+                <img src="https://unsplash.com" alt="Avatar do estudante" class="avatar">
+            </div>
+            <div class="profile-info">
+                <h2 id="info-estudante">Informações do Estudante</h2>
+                <p><strong>Nome:</strong> João</p>
+                <p><strong>Idade:</strong> 16 anos</p>
+                <p><strong>Curso:</strong> Técnico em Desenvolvimento de Sistemas</p>
+                <p><strong>Interesses:</strong> Tecnologia, jogos e música</p>
+                <p><strong>Objetivo:</strong> Aprender programação</p>
+            </div>
+        </section>
+
+        <!-- Grid de Cards de Informações -->
+        <div class="info-grid">
+            <!-- Seção Eu Gosto -->
+            <section class="card" aria-labelledby="gostos-titulo">
+                <h2 id="gostos-titulo">Eu gosto de...</h2>
+                <ul class="likes-list">
+                    <li><span class="icon" aria-hidden="true">🎮</span> Jogos</li>
+                    <li><span class="icon" aria-hidden="true">🎵</span> Música</li>
+                    <li><span class="icon" aria-hidden="true">💻</span> Computadores</li>
+                    <li><span class="icon" aria-hidden="true">⚽</span> Esportes</li>
+                    <li><span class="icon" aria-hidden="true">📚</span> Tecnologia</li>
+                </ul>
+            </section>
+
+            <!-- Seção Como Aprendo Melhor -->
+            <section class="card" aria-labelledby="aprendizado-titulo">
+                <h2 id="aprendizado-titulo">📖 Aprendo melhor quando:</h2>
+                <ul class="learning-list">
+                    <li>As instruções são claras.</li>
+                    <li>As atividades estão organizadas.</li>
+                    <li>Tenho exemplos práticos.</li>
+                    <li>Sei exatamente o que preciso fazer.</li>
+                    <li>As informações estão divididas em etapas fáceis.</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- Seção Minha Rotina -->
+        <section class="card routine-section" aria-labelledby="rotina-titulo">
+            <h2 id="rotina-titulo">Minha rotina</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Horário</th>
+                            <th scope="col">Atividade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>07:00</td>
+                            <td>Acordar</td>
+                        </tr>
+                        <tr>
+                            <td>08:00</td>
+                            <td>Escola</td>
+                        </tr>
+                        <tr>
+                            <td>12:00</td>
+                            <td>Almoço</td>
+                        </tr>
+                        <tr>
+                            <td>13:30</td>
+                            <td>Estudos</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Seção do Botão de Ação -->
+        <section class="action-section">
+            <button class="btn-primary" type="button" aria-label="Ver informações completas do perfil">
+                <span>📋</span> Ver informações completas
+            </button>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 - Desenvolvido com foco em acessibilidade web.</p>
+    </footer>
+
+</body>
+</html>
