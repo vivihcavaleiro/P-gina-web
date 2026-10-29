@@ -1,0 +1,230 @@
+/* --- Variáveis Globais (Cores Neutras e Alto Contraste) --- */
+:root {
+    --bg-color: #f4f6f9;
+    --card-bg: #ffffff;
+    --text-main: #1a1a1a;
+    --text-muted: #4a4a4a;
+    --primary-color: #0056b3;
+    --primary-hover: #003d82;
+    --border-color: #cccccc;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- Reset e Estilos Gerais --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: var(--font-family);
+    line-height: 1.6;
+    padding-bottom: 2rem;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* --- Cabeçalho --- */
+.main-header {
+    background-color: var(--card-bg);
+    border-bottom: 3px solid var(--primary-color);
+    text-align: center;
+    padding: 2.5rem 1rem;
+    margin-bottom: 2rem;
+}
+
+.main-header h1 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.main-header p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+}
+
+/* --- Componente Base: Card --- */
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--bg-color);
+    padding-bottom: 0.5rem;
+}
+
+/* --- Cartão de Perfil Principal --- */
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.avatar-container {
+    margin-bottom: 1.5rem;
+}
+
+.avatar {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-color);
+}
+
+.profile-info h2 {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.profile-info p {
+    margin-bottom: 0.6rem;
+    font-size: 1.1rem;
+}
+
+/* --- Listas --- */
+ul {
+    list-style-position: inside;
+}
+
+.likes-list, .learning-list {
+    list-style: none;
+}
+
+.likes-list li, .learning-list li {
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+    border-bottom: 1px dashed var(--bg-color);
+}
+
+.learning-list li::before {
+    content: "• ";
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.3rem;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+
+.icon {
+    margin-right: 0.5rem;
+}
+
+/* --- Tabela de Rotina --- */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+}
+
+th, td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: var(--bg-color);
+}
+
+/* --- Seção do Botão --- */
+.action-section {
+    text-align: center;
+    margin: 2.5rem 0;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    font-family: var(--font-family);
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--primary-hover);
+    outline: 3px solid var(--text-main); /* Visibilidade para navegação via teclado */
+}
+
+.btn-primary:active {
+    transform: scale(0.98);
+}
+
+/* --- Rodapé --- */
+.main-footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+
+/* --- 📱 RESPONSIVIDADE (Layout em telas maiores) --- */
+@media (min-width: 600px) {
+    .profile-card {
+        flex-direction: row;
+        text-align: left;
+        align-items: flex-start;
+        gap: 2.5rem;
+    }
+
+    .avatar-container {
+        margin-bottom: 0;
+    }
+
+    .info-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .card {
+        margin-bottom: 0;
+    }
+
+    .routine-section {
+        margin-top: 1.5rem;
+    }
+}
